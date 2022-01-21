@@ -74,4 +74,25 @@ const server = require('http').Server(app);
 const io = require('socket.io')(server);
 ```
 
+# Clase 4:
+### Conexión al Socket:
 
+- Conectamos con el cliente mediante el método connect:
+```
+io.on('connection', (socket) => {
+  console.log('Cliente conectado');
+});
+```
+
+- En vez de ver por consola la conexión ejecutamos una revision de IP:
+```
+io.on('connection', (socket) => {
+  socket.handshake.address;
+});
+```
+
+- Antes de ejecutarlo usamos una vista para que todos los HTML de client seran estaticos y los cargue de la carpeta client.
+
+- En la carpeta client hemos creado index y main.js que serán nuestros archivos de entrada.
+
+- cramos la carpeta socket.io con archivo socket.io.js
