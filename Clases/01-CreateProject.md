@@ -49,3 +49,29 @@ npm install nodemon --save-dev
 "scripts": {
   "start": "nodemon server/index.js"
 }
+```	
+
+# Clase 3:
+### Cargar Librerías:
+
+- Importamos Express:
+```
+const express = require('express');
+```
+
+- Llamamos a express:
+```
+const app = express();
+```
+
+- Cargamos el server Http con la librería de Node y en el metodo server pasamos la app de express
+```
+const server = require('http').Server(app);
+```
+
+- Le pasamos a Socket.io la instancia del server:
+```
+const io = require('socket.io')(server);
+```
+
+
