@@ -1,0 +1,19 @@
+{
+  "name": "chat-app",
+  "version": "1.0.0",
+  "description": "Proyecto de Chat con Node y Socket.io",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Juandieruiz/application-chat.git"
+  },
+  "author": "Juan Diego Gómez Ruiz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Juandieruiz/application-chat/issues"
+  },
+  "homepage": "https://github.com/Juandieruiz/application-chat#readme"
+}
