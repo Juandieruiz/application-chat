@@ -95,4 +95,12 @@ io.on('connection', (socket) => {
 
 - En la carpeta client hemos creado index y main.js que serán nuestros archivos de entrada.
 
-- cramos la carpeta socket.io con archivo socket.io.js
+- creamos la carpeta socket.io con archivo socket.io.js
+
+# Clase 5:
+### Mensajes en el chat:
+
+- en el archivo main.js:
+```
+const socket = io.connect('http://192.168.1.163:8080',{forceNew: true});
+```

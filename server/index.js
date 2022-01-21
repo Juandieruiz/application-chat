@@ -11,13 +11,21 @@ app.get('/app', function(req, res){
     res.status(200).send('Hola mundo desde una ruta');
 });
 
+// Configuramos un mensaje de Bienvenida
+let messages = [{
+    id: 1,
+    text: 'Bienvenido al chat de Juan Diego Gómez',
+    nickname: 'Bot'
+}];
+
 // Conexión con el cliente(SOCKET) 
-io.on('connection', ((socket) => {
-    console.log("El cliente con IP: "+socket.handshake.address+" se ha conectado..."); // 
-    }
-));
+io.on('connection', function(socket) {
+    console.log("Conectado con la IP"+socket.handshake.address); // 
+    // Enviamos el mensaje de bienvenida
+    socket.emit('messages', messages);
+});
 
 // le pasamos el puerto que vamos a usar y un callback
-server.listen(8080, () => {
-    console.log('Servidor ejecutandose en el puerto 8080');
+server.listen(3500, () => {
+    console.log('Servidor ejecutandose en el puerto 3500');
 });
