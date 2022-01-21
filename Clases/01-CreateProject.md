@@ -26,3 +26,26 @@
 
 - Creacion de carpetas Client & Server
 
+# Clase 2:
+### Instalar dependencias:
+
+- Instalamos Express:
+```
+npm install express --save
+```
+
+- Instalamos Socket.io:
+```
+npm install socket.io --save
+```
+
+- Instalamos Nodemon:
+```
+npm install nodemon --save-dev
+```
+
+- modificamos package.json:
+```
+"scripts": {
+  "start": "nodemon server/index.js"
+}

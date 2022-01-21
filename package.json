@@ -4,6 +4,7 @@
   "description": "Proyecto de Chat con Node y Socket.io",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon server/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +16,12 @@
   "bugs": {
     "url": "https://github.com/Juandieruiz/application-chat/issues"
   },
-  "homepage": "https://github.com/Juandieruiz/application-chat#readme"
+  "homepage": "https://github.com/Juandieruiz/application-chat#readme",
+  "dependencies": {
+    "express": "^4.17.2",
+    "socket.io": "^4.4.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
 }
