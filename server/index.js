@@ -12,14 +12,14 @@ app.get('/app', function(req, res){
 });
 
 // Configuramos un mensaje de Bienvenida
-let messages = [{
+var messages = [{
     id: 1,
-    text: 'Bienvenido al chat de Juan Diego Gómez',
+    text: 'Bienvenido al chat de Juan Diego Gómez con NodeJS y socket.io',
     nickname: 'Bot'
 }];
 
 // Conexión con el cliente(SOCKET) 
-io.on('connection', function(socket) {
+io.sockets.on('connection', function(socket) {
     console.log("Conectado con la IP"+socket.handshake.address); // 
     // Enviamos el mensaje de bienvenida
     socket.emit('messages', messages);

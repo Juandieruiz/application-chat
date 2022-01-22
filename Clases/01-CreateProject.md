@@ -100,7 +100,28 @@ io.on('connection', (socket) => {
 # Clase 5:
 ### Mensajes en el chat:
 
-- en el archivo main.js:
+- en el archivo main.js: para explicarle cual sera nuestro servidor:
 ```
 const socket = io.connect('http://192.168.1.163:8080',{forceNew: true});
 ```
+
+- Despues hacemos un socket.on para escuchar el evento 'message' que es el que nos enviara el mensaje del cliente:
+```
+socket.on('message', (data) => {
+  console.log(data);
+});
+```
+
+- finalmente la function render que contendra el mensaje al cliente.
+
+- En el archivo index.js agregamos el mensaje al cliente:
+```
+var messages = [{
+    id: 1,
+    text: 'Bienvenido al chat de Juan Diego Gómez con NodeJS y socket.io',
+    nickname: 'Bot'
+}];
+```
+
+
+

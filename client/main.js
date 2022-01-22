@@ -2,7 +2,7 @@
 console.log('Conectando al servidor');
 var socket = io.connect('http://192.168.1.136:3500',{'forceNew': true});
 
-socket.on('messages' (() => {
+socket.on('messages', ((data) => {
     console.log(data);
     render(data);
 }));
