@@ -23,6 +23,11 @@ io.sockets.on('connection', function(socket) {
     console.log("Conectado con la IP"+socket.handshake.address); // 
     // Enviamos el mensaje de bienvenida
     socket.emit('messages', messages);
+
+    socket.on('add-message',(data) => {
+        messages.push(data);
+        io.sockets.emit('messages', messages);
+    });
 });
 
 // le pasamos el puerto que vamos a usar y un callback

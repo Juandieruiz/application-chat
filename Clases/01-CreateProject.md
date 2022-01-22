@@ -123,5 +123,10 @@ var messages = [{
 }];
 ```
 
+# Clase 6:
+### Gestionamiento de mensajes:
 
+- Estilo básico
+- Formularios
+- Código para devolver mensajes
 
